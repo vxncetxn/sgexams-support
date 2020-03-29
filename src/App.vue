@@ -2,18 +2,22 @@
   <div id="app">
     <Navbar/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Navbar from "@/sections/Navbar.vue";
+import Footer from "@/sections/Footer.vue";
 
 require("typeface-poppins");
+require("typeface-caveat");
 
 export default {
   name: "app",
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 };
 </script>
@@ -22,22 +26,19 @@ export default {
 <style>
 :root {
   --font-primary: "Poppins";
-  --color-text: #fbfbfb;
+  --font-secondary: "Caveat";
 
-  /* --color-background: #e9f7fb;
-  --color-title-text: #2d3887;
-  --color-title-text: #5360c6;
-  --color-title-text-hover: #3947ac;
-  --color-cta-text: #f3f3fb;
-  --color-section-title-text: #e67fbe;
-  --color-regular-text: #5360c6;
-  --color-accent: #e67fbe;
-  --color-gray: #788ebf; */
+  /* --color-bg-one: #432c9c; */
+  --color-bg-one: #5741d8;
+  --color-bg-two: #001d66;
+  --color-accent: #f2c100;
+  --color-text: #fbfbfb;
+  --color-gray: #c7c7c7;
 }
 
 @custom-media --mobile-narrow (max-width: 570px);
-@custom-media --mobile-wide (max-width: 847px);
-@custom-media --desktop-narrow (max-width: 1000px);
+@custom-media --mobile-wide (max-width: 896px);
+@custom-media --desktop-narrow (max-width: 1200px);
 
 * {
   margin: 0;
@@ -50,19 +51,20 @@ html {
 }
 
 body {
-  height: 200vh;
+  display: flex;
+  justify-content: center;
   position: relative;
-  background: #1f4037; /* fallback for old browsers */
+  background: var(--color-bg-one);
   background: -webkit-linear-gradient(
-    to right,
-    #99f2c8,
-    #1f4037
-  ); /* Chrome 10-25, Safari 5.1-6 */
+    to bottom,
+    var(--color-bg-one),
+    var(--color-bg-two) 70%
+  );
   background: linear-gradient(
     to bottom,
-    #432c9c,
-    #00237e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    var(--color-bg-one),
+    var(--color-bg-two) 70%
+  );
   overflow-x: hidden;
 }
 
@@ -102,5 +104,9 @@ button {
 
 *:focus {
   outline: 5px solid var(--color-accent);
+}
+
+#app {
+  max-width: 1440px;
 }
 </style>

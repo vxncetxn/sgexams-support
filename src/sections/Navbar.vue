@@ -7,9 +7,31 @@
       <li>
         <router-link to="/About">About</router-link>
       </li>
-      <li>Help Us</li>
-      <li>Other Avenues</li>
-      <li>Supporters Login</li>
+      <li>
+        <router-link to="/Help">Help Us</router-link>
+      </li>
+      <li>
+        <router-link to="/Avenues">Other Avenues</router-link>
+      </li>
+      <li>
+        <router-link to="/Login">Supporters Login</router-link>
+      </li>
+      <li class="hamburger">
+        <button>
+          <span class="sr-only">Open navigation menu</span>
+          <svg viewBox="0 0 50 29.12" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m25 16.8h-22.62a2.17 2.17 0 0 1 -2.14-1.32 1.9 1.9 0 0 1 .34-2.33 3.07 3.07 0 0 1 1.78-.79c3.47-.07 6.94 0 10.4 0h34.84a2.2 2.2 0 0 1 2.4 2.28 2.15 2.15 0 0 1 -2.22 2.16z"
+            ></path>
+            <path
+              d="m28 4.49h-19.6a2.27 2.27 0 0 1 -2.04-3.49 1.91 1.91 0 0 1 1.71-1h2.2 37.29a2.17 2.17 0 0 1 2.44 2.19 2.22 2.22 0 0 1 -2.34 2.3z"
+            ></path>
+            <path
+              d="m34.45 29.12h-13.09a2.14 2.14 0 0 1 -2.44-2.33 2.25 2.25 0 0 1 2.43-2.15h26.33a2.19 2.19 0 0 1 2.32 2.36 2.15 2.15 0 0 1 -2.3 2.15z"
+            ></path>
+          </svg>
+        </button>
+      </li>
     </ul>
   </nav>
 </template>
@@ -21,10 +43,6 @@ export default {
 </script>
 
 <style scoped>
-nav {
-  /* border: 1px solid red; */
-}
-
 nav > ul {
   padding: 30px 60px;
   display: flex;
@@ -36,12 +54,46 @@ nav > ul {
   color: var(--color-text);
 }
 
+nav > ul > li:hover {
+  color: var(--color-accent);
+}
+
 nav > ul > li:first-child {
   margin-left: auto;
 }
 
 nav > ul > li + li {
   margin-left: 40px;
+}
+
+.hamburger {
+  display: none;
+  margin-left: auto;
+}
+
+.hamburger > button > svg {
+  width: 30px;
+  fill: var(--color-text);
+}
+
+@media (--mobile-wide) {
+  nav > ul {
+    padding: 30px 80px;
+  }
+
+  nav > ul > li:not(.hamburger) {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (--mobile-narrow) {
+  nav > ul {
+    padding: 30px 20px;
+  }
 }
 </style>
 
