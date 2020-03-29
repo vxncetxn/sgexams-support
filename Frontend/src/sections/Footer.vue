@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="footer-row-two">
-      <div>Copyright © 2020. All rights reserved.</div>
+      <div>Copyright © {{new Date().getFullYear()}}. All rights reserved.</div>
       <ul>
         <li>
           <button>Terms & Conditions</button>

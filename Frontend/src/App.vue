@@ -28,9 +28,8 @@ export default {
   --font-primary: "Poppins";
   --font-secondary: "Caveat";
 
-  /* --color-bg-one: #432c9c; */
-  --color-bg-one: #5741d8;
-  --color-bg-two: #001d66;
+  --color-bg-one: #7914cd;
+  --color-bg-two: #372476;
   --color-accent: #f2c100;
   --color-text: #fbfbfb;
   --color-gray: #c7c7c7;

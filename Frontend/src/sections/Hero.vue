@@ -35,6 +35,7 @@ export default {
 
 <style scoped>
 section {
+  width: 100vw;
   text-align: center;
   padding: 0 250px;
 }
@@ -117,6 +118,10 @@ p {
   .submit-row {
     font-size: 22px;
   }
+
+  .submit-row > button > svg {
+    width: 18px;
+  }
 }
 
 @media (--mobile-wide) {
@@ -137,6 +142,11 @@ p {
   .submit-row > button {
     margin-left: 20px;
   }
+
+  .submit-row > button > svg {
+    width: 15px;
+    margin-left: 2px;
+  }
 }
 
 @media (--mobile-narrow) {
@@ -151,6 +161,10 @@ p {
   p,
   .submit-row {
     font-size: 16px;
+  }
+
+  .submit-row > button > svg {
+    width: 13px;
   }
 }
 

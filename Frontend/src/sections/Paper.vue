@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="paper-content">
-      <textarea placeholder="Hello, you can write to us by typing here!"/>
+      <textarea placeholder="Hello, write to us by typing here!"/>
     </div>
   </div>
 </template>
