@@ -1,10 +1,10 @@
 <template>
   <section id="hero">
-    <h1>Reach out to us.</h1>
-    <p>
+    <Header>Reach out to us.</Header>
+    <RegText>
       We provide a safe space for distressed students to share their troubles
       anonymously in their times of need. Start by writing to us below.
-    </p>
+    </RegText>
     <div class="submit-row">
       <input placeholder="Your email address">
       <button>
@@ -25,35 +25,28 @@
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
+import RegText from "@/components/RegText.vue";
 import Paper from "./Paper";
 
 export default {
   name: "hero",
-  components: { Paper }
+  components: { Header, RegText, Paper }
 };
 </script>
 
 <style scoped>
 section {
-  width: 100vw;
   text-align: center;
   padding: 0 250px;
 }
 
 h1 {
-  font-family: var(--font-primary);
-  font-size: 84px;
-  font-weight: 800;
-  color: var(--color-accent);
   margin-top: 40px;
   animation: intro-text 0.6s linear;
 }
 
 p {
-  font-family: var(--font-primary);
-  font-size: 24px;
-  font-weight: 300;
-  color: var(--color-text);
   margin-top: 10px;
   animation: intro-text 0.6s linear;
 }
@@ -110,11 +103,6 @@ p {
     padding: 0 150px;
   }
 
-  h1 {
-    font-size: 72px;
-  }
-
-  p,
   .submit-row {
     font-size: 22px;
   }
@@ -130,11 +118,9 @@ p {
   }
 
   h1 {
-    font-size: 50px;
     margin-top: 20px;
   }
 
-  p,
   .submit-row {
     font-size: 18px;
   }
@@ -154,11 +140,6 @@ p {
     padding: 0 20px;
   }
 
-  h1 {
-    font-size: 38px;
-  }
-
-  p,
   .submit-row {
     font-size: 16px;
   }

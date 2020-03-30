@@ -1,51 +1,96 @@
 <template>
   <section class="avenues">
-    <h1>Other Avenues</h1>
+    <Header>Other Avenues</Header>
+    <Subheader>Mental Health Resources</Subheader>
+    <Anchor
+      href="https://www.ncss.gov.sg/NCSS/media/NCSS-Documents-and-Forms/NCSS%20Internal%20Documents/Directory-on-Mental-Health-Services.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Resource One</Anchor>
+    <br>
+    <Anchor
+      href="https://www.ncss.gov.sg/NCSS/media/NCSS-Documents-and-Forms/NCSS%20Internal%20Documents/Directory-on-Mental-Health-Services.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Resource Two</Anchor>
+    <br>
+    <Anchor
+      href="https://www.ncss.gov.sg/NCSS/media/NCSS-Documents-and-Forms/NCSS%20Internal%20Documents/Directory-on-Mental-Health-Services.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Resource Three</Anchor>
+    <br>
+    <Anchor
+      href="https://www.ncss.gov.sg/NCSS/media/NCSS-Documents-and-Forms/NCSS%20Internal%20Documents/Directory-on-Mental-Health-Services.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Resource Four</Anchor>
+    <br>
+    <Anchor
+      href="https://www.ncss.gov.sg/NCSS/media/NCSS-Documents-and-Forms/NCSS%20Internal%20Documents/Directory-on-Mental-Health-Services.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Mental Health Services Resource Directory by NCSS</Anchor>
+    <Subheader>Crisis & Suicide Prevention Helplines</Subheader>
+    <RegText>
+      Samaritans of Singapore 24-Hours Hotline:
+      <span>1800 221 4444</span>
+    </RegText>
+    <RegText>
+      Institute of Mental Health’s 24-Hours Helpline:
+      <span>6389 2222</span>
+    </RegText>
+    <RegText>
+      Singapore Association of Mental Health Helpline:
+      <span>1800 283 7019</span>
+    </RegText>
+    <RegText>
+      <span>If someone you know is at immediate risk, please call 24-hour emergency medical services.</span>
+    </RegText>
   </section>
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
+import Subheader from "@/components/Subheader.vue";
+import RegText from "@/components/RegText.vue";
+import Anchor from "@/components/Anchor.vue";
+
 export default {
-  name: "About"
+  name: "avenues",
+  components: {
+    Header,
+    Subheader,
+    RegText,
+    Anchor
+  }
 };
 </script>
 
 <style scoped>
 section {
-  width: 100vw;
-  height: 200vh;
   padding: 0 250px;
 }
 
 h1 {
-  font-family: var(--font-primary);
-  font-size: 84px;
-  font-weight: 800;
-  color: var(--color-accent);
   margin-top: 40px;
-  animation: intro-text 0.6s linear;
+}
+
+h2 {
+  margin-top: 80px;
 }
 
 p {
-  font-family: var(--font-primary);
-  font-size: 24px;
-  font-weight: 300;
-  color: var(--color-text);
-  margin-top: 10px;
-  animation: intro-text 0.6s linear;
+  margin-top: 20px;
+}
+
+a {
+  margin-top: 30px;
 }
 
 @media (--desktop-narrow) {
   section {
     padding: 0 150px;
-  }
-
-  h1 {
-    font-size: 72px;
-  }
-
-  p {
-    font-size: 22px;
   }
 }
 
@@ -55,26 +100,13 @@ p {
   }
 
   h1 {
-    font-size: 50px;
     margin-top: 20px;
-  }
-
-  p {
-    font-size: 18px;
   }
 }
 
 @media (--mobile-narrow) {
   section {
     padding: 0 20px;
-  }
-
-  h1 {
-    font-size: 38px;
-  }
-
-  p {
-    font-size: 16px;
   }
 }
 </style>

@@ -28,7 +28,7 @@ export default {
   --font-primary: "Poppins";
   --font-secondary: "Caveat";
 
-  --color-bg-one: #7914cd;
+  --color-bg-one: #5139d7;
   --color-bg-two: #372476;
   --color-accent: #f2c100;
   --color-text: #fbfbfb;
@@ -106,6 +106,7 @@ button {
 }
 
 #app {
+  width: 100%;
   max-width: 1440px;
 }
 </style>

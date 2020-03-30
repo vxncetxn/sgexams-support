@@ -14,7 +14,10 @@
       </div>
       <div>
         Email:
-        <span>sgexams@example.com</span>
+        <a
+          href="mailto:sgexams@example.com"
+          style="color: var(--color-accent);"
+        >sgexams@example.com</a>
       </div>
     </div>
     <div class="footer-row-two">
